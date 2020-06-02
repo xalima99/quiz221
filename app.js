@@ -20,10 +20,10 @@ app.use('/api/questions', questions);
 //handle prod
 // if(process.env.NODE_ENV == 'production'){
   //static folder
-  app.use(express.static(__dirname + '/server/public/'));
+  app.use(express.static(__dirname + '/dist/'));
 
   //handle SPA
-  app.get(/.*/, (req, res) => res.sendFile(__dirname + '/server/public/index.html'))
+  app.get(/.*/, (req, res) => res.sendFile(__dirname + '/dist/index.html'))
 // }
 
 const port = process.env.PORT || 4000;
