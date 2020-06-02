@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node quizz/app.js",
-    "dev": "nodemon quizz/app.js"
+    "start": "node ./app.js",
+    "dev": "nodemon ./app.js"
   },
   "author": "Fall amadou",
   "license": "ISC",
