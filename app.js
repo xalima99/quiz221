@@ -14,16 +14,19 @@ const app = express();
 
 //routes
 const questions = require('./server/routes/api/questions');
+const score = require('./server/routes/api/score');
+
 app.use('/api/questions', questions);
+app.use('/api/score', score);
 
 // console.log(process.env.NODE_ENV)
 //handle prod
 // if(process.env.NODE_ENV == 'production'){
   //static folder
-  app.use(express.static(__dirname + '/dist/'));
+  app.use(express.static(__dirname + '/server/public/'));
 
   //handle SPA
-  app.get(/.*/, (req, res) => res.sendFile(__dirname + '/dist/index.html'))
+  app.get(/.*/, (req, res) => res.sendFile(__dirname + '/server/public/index.html'))
 // }
 
 const port = process.env.PORT || 4000;

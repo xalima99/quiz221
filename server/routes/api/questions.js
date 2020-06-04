@@ -5,7 +5,7 @@ const mongodb = require('mongodb');
 
 const router = express.Router();
 //importing model
-const Question = require('../../../../../models/question.model');
+const Question = require('../../models/question.model');
 
 const URI = 'mongodb+srv://abc123:PXcahRYfODCBcl7A@vuexpress-w1elu.mongodb.net/test?retryWrites=true&w=majority';
 async function loadPostsCollection() {
